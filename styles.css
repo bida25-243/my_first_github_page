@@ -1,114 +1,77 @@
+
 /* Global styles */
-:root {
-    --brand: #4CAF50;
-    --accent: #ff5722;
-    --bg: #f9f9f9;
-    --text: #333;
-    --footer-height: 60px;
-}
-
-/* Better box sizing */
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    color: var(--text);
-    background-color: var(--bg);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* Header */
+/* Header and navigation (from Tutorial 3) */
 header {
-    background-color: transparent;
-    color: inherit;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
-
 header h1 {
-    margin: 0;
+  margin: 0;
 }
-
-/* Navigation */
 nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
 }
-
 nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Main section */
+/* Main content */
 main {
-    padding: 24px;
-    margin: 0 auto;
-    width: 100%;
-    padding-bottom: calc(var(--footer-height) + 20px);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
-
 main img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 12px 10px;
-    position: static;
-    width: 100%;
-    height: var(--footer-height);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-/* Paragraphs */
+/* Paragraphs and links */
 p {
-    font-size: 1.05em;
+  font-size: 1.1em;
 }
-
-/* Links */
 a {
-    color: var(--brand);
-    text-decoration: none;
+  color: #4CAF50;
+  text-decoration: none;
 }
-
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Image border */
-/* Scope image border to main content images to avoid styling icons or logos */
-main img.img-fluid, main img {
-    border: 5px solid var(--brand);
-    border-radius: 10px;
+/* Images */
+img {
+  border: 5px solid #4CAF50;
+  border-radius: 10px;
 }
 
-/* Responsive tweaks */
-@media (max-width: 576px) {
-    :root { --footer-height: 50px; }
-    main { padding: 16px; padding-bottom: calc(var(--footer-height) + 16px); }
-    main img.img-fluid, main img { border-width: 3px; border-radius: 8px; }
-    p { font-size: 1em; }
-}
-
-@media (min-width: 1200px) {
-    main { max-width: 1000px; }
-}
-
-/* Email link highlight */
+/* Contact page mailto link */
 main a[href^="mailto:"] {
-    color: var(--accent);
-    font-weight: bold;
+  color: #ff5722;
+  font-weight: bold;
 }
